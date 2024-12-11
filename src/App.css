@@ -1,0 +1,83 @@
+/* Default layout */
+.card-grid {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 2px solid black;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.card-top, .card-bottom {
+  font-size: 20px; /* Start with a base font size */
+  font-weight: bold;
+  background-color: #87CEEB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px; /* Add some padding for better visual appearance */
+  position: relative;
+  flex: 1; /* Make sure each section takes up full available space */
+  word-wrap: break-word; /* Allow text to break onto the next line if needed */
+}
+
+/* For card bottom (rotated text) */
+.card-bottom {
+  transform: rotate(180deg);
+  background-color: #FFFFFF;
+  color: #87CEEB;
+}
+
+/* Image Placeholder */
+.image-placeholder {
+  width: 30px;
+  height: 30px;
+  background-color: lightgray;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+/* Printing Styles */
+@media print {
+  /* Remove padding and margins for print layout */
+  body, .card-grid {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Set up a grid to display 2 cards per row and 4 rows per page */
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+    grid-template-rows: repeat(4, auto); /* 4 rows per page */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* Adjust card width for printing */
+  .card {
+    /* width: 100%; */
+    page-break-inside: avoid; /* Prevent card from splitting across pages */
+  }
+
+  /* Ensure the image placeholders stay at the bottom */
+  .image-placeholder {
+    width: 30px;
+    height: 30px;
+    background-color: lightgray;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+}
