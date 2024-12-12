@@ -227,7 +227,7 @@ const Cards = () => {
             "bottom": {"id": 112, "name": "Andy Samberg", "category": "A"}
         },
         {
-            "top": {"id": 113, "name": "Amelia Mignonette Grimaldi Thermopolis Renaldo Princess of Genovia", "category": "A"},
+            "top": {"id": 113, "name": "Amelia Mignonette Grimaldi Thermopolis Renaldi Princess of Genovia", "category": "A"},
             "bottom": {"id": 114, "name": "Daveed Morris", "category": "C"}
         },
         {
@@ -1003,7 +1003,7 @@ const Cards = () => {
             "bottom": {"id": 500, "name": "Rebecca Cherson", "category": "C"}
         },
         {
-            "top": {"id": 501, "name": "Bisqueensteenawitzenschwartzenberger", "category": "C"},
+            "top": {"id": 501, "name": "Bisqueensteenawitz enschwartzenberger", "category": "C"},
             "bottom": {"id": 502, "name": "Cynthia Erivo", "category": "A"}
         },
         {
