@@ -1000,31 +1000,57 @@ const Cards = () => {
         },
         {
             "top": {"id": 499, "name": "Eugene Levy", "category": "A"},
-            "bottom": {"id": 500, "name": "", "category": "A"}
+            "bottom": {"id": 500, "name": "Rebecca Cherson", "category": "C"}
+        },
+        {
+            "top": {"id": 501, "name": "Bisqueensteenawitzenschwartzenberger", "category": "C"},
+            "bottom": {"id": 502, "name": "Cynthia Erivo", "category": "A"}
+        },
+        {
+            "top": {"id": 503, "name": "Elphaba", "category": "A"},
+            "bottom": {"id": 504, "name": "Ariana Grande", "category": "A"}
+        },
+        {
+            "top": {"id": 505, "name": "Glinda", "category": "A"},
+            "bottom": {"id": 506, "name": "The Wizard of Oz", "category": "A"}
+        },
+        {
+            "top": {"id": 507, "name": "Kristen Chenoweth", "category": "A"},
+            "bottom": {"id": 508, "name": "Prince Fiyero", "category": "A"}
+        },
+        {
+            "top": {"id": 509, "name": "Dr. Dillamond", "category": "A"},
+            "bottom": {"id": 510, "name": "Madame Morrible", "category": "A"}
+        },
+        {
+            "top": {"id": 511, "name": "Boq Woodsman", "category": "A"},
+            "bottom": {"id": 512, "name": "Nessarose", "category": "A"}
         }
     ]
 
 
     return (
-    <>
-        <div className="card-grid">
-            {names.map((name) => {
-            return (
-                <div key={name?.top?.id} className="card">
-                <div className="card-top">
-                    {name?.top?.name}
-                    <div className="image-placeholder">{name?.top?.category}</div>
-                </div>
-                <div className="card-bottom">
-                    {name?.bottom?.name}
-                    <div className="image-placeholder">{name?.bottom?.category}</div>
-                </div>
-                </div>
-            );
-            })}
+  <div className="card-grid">
+    {names.map((name) => {
+      return (
+        <div key={name?.top?.id} className="card">
+          <div className="card-top">
+            <div className="card-text-container">
+              {name?.top?.name}
+            </div>
+            <div className="image-placeholder">{name?.top?.category}</div>
+          </div>
+          <div className="card-bottom">
+            <div className="card-text-container">
+              {name?.bottom?.name}
+            </div>
+            <div className="image-placeholder">{name?.bottom?.category}</div>
+          </div>
         </div>
-    </>
-  )
+      );
+    })}
+  </div>
+);
 }
 
 export default Cards
