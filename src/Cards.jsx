@@ -1020,37 +1020,73 @@ const Cards = () => {
         },
         {
             "top": {"id": 509, "name": "Dr. Dillamond", "category": "A"},
-            "bottom": {"id": 510, "name": "Madame Morrible", "category": "A"}
+            "bottom": {"id": 510, "name": "Jonah Takalua", "category": "A"}
         },
         {
             "top": {"id": 511, "name": "Boq Woodsman", "category": "A"},
-            "bottom": {"id": 512, "name": "Nessarose", "category": "A"}
+            "bottom": {"id": 512, "name": "Chris Lilley", "category": "A"}
+        },
+        {
+            "top": {"id": 513, "name": "Ja'mie King", "category": "A"},
+            "bottom": {"id": 514, "name": "Nessarose", "category": "A"}
+        },
+        {
+            "top": {"id": 515, "name": "Madame Morrible", "category": "A"},
+            "bottom": {"id": 516, "name": "Greg Mr G Gregson", "category": "A"}
+        },
+        {
+            "top": {"id": 517, "name": "Fat Louie", "category": "A"},
+            "bottom": {"id": 518, "name": "", "category": "A"}
         }
     ]
 
+    const displayImage = (category) => {
+        let image = "/am-israel-chai.JPG";
+        if (category === "A") {
+            image = "/pop-culture.JPG";
+        } else if (category === "B") {
+            image = "/am-israel-chai.JPG";
+        } else if (category === "C") {
+            image = "/friends-family.jpeg";
+        } else if (category === "D") {
+            image = "/am-israel-chai.JPG";
+        } else if (category === "E") {
+            image = "/sports.JPG";
+        }
+        return image
+    }
+    
+    
+
 
     return (
-  <div className="card-grid">
-    {names.map((name) => {
-      return (
-        <div key={name?.top?.id} className="card">
-          <div className="card-top">
-            <div className="card-text-container">
-              {name?.top?.name}
-            </div>
-            <div className="image-placeholder">{name?.top?.category}</div>
-          </div>
-          <div className="card-bottom">
-            <div className="card-text-container">
-              {name?.bottom?.name}
-            </div>
-            <div className="image-placeholder">{name?.bottom?.category}</div>
-          </div>
+        <div className="card-grid">
+            {names.map((name) => {
+                return (
+                    <div key={name?.top?.id} className="card">
+                        <div className="card-top">
+                            <div className="card-text-container">
+                                {name?.top?.name}
+                            </div>
+                            <div className="image-placeholder">
+                                {/* {name?.top?.category} */}
+                                <img src={displayImage(name.top.category)} alt={name?.top?.category} />
+                            </div>
+                        </div>
+                        <div className="card-bottom">
+                            <div className="card-text-container">
+                                {name?.bottom?.name}
+                            </div>
+                            <div className="image-placeholder">
+                                {/* {name?.bottom?.category} */}
+                                <img src={displayImage(name.bottom.category)} alt={name?.bottom?.category} />
+                            </div>
+                        </div>
+                    </div>
+                );
+            })}
         </div>
-      );
-    })}
-  </div>
-);
+    );
 }
 
 export default Cards
