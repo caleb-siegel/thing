@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Cards = () => {
+
     const names = [
         {
             "top": {"id": 1, "name": "Tara Roisman", "category": "C"},
@@ -503,7 +504,7 @@ const Cards = () => {
             "bottom": {"id": 250, "name": "Tony Vlachos", "category": "D"}
         },
         {
-            "top": {"id": 251, "name": "Miss Fink", "category": "C"},
+            "top": {"id": 251, "name": "Aunt Cousin Tirza Bayewitz", "category": "C"},
             "bottom": {"id": 252, "name": "Aaron Boone", "category": "E"}
         },
         {
@@ -620,7 +621,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 309, "name": "Bradley Cooper", "category": "A"},
-            "bottom": {"id": 310, "name": 'Josh "Joshy" Cohen', "category": "A"}
+            "bottom": {"id": 310, "name": "Josh Cohen", "category": "A"}
         },
         {
             "top": {"id": 311, "name": "Jennifer Giller", "category": "C"},
@@ -1003,7 +1004,7 @@ const Cards = () => {
             "bottom": {"id": 500, "name": "Rebecca Cherson", "category": "C"}
         },
         {
-            "top": {"id": 501, "name": "Bisquensteenawitz enschwartzenberger", "category": "C"},
+            "top": {"id": 501, "name": "Bisqueensteenawitz enschwartzenberger", "category": "C"},
             "bottom": {"id": 502, "name": "Cynthia Erivo", "category": "A"}
         },
         {
@@ -1065,7 +1066,7 @@ const Cards = () => {
         if (category === "A") {
             image = "/pop-culture.JPG";
         } else if (category === "B") {
-            image = "/medicine.jpeg";
+            image = "/am-israel-chai.JPG";
         } else if (category === "C") {
             image = "/friends-family.jpeg";
         } else if (category === "D") {
@@ -1075,33 +1076,45 @@ const Cards = () => {
         }
         return image
     }
-    
-    
-
 
     return (
         <div className="card-grid">
             {names.map((name) => {
                 return (
                     <div key={name?.top?.id} className="card">
-                        <div className="card-top">
-                            <div className="times-up-text-top">Times Up: Bisque's 30th</div>
+                        <div className="card-top back">
+                            <div className="image-1">
+                                {/* {name?.top?.category} */}
+                                <img src="/animatedimage.jpeg" alt={name?.top?.category} />
+                            </div>
                             <div className="card-text-container">
-                                {name?.top?.name}
+                                <div style={{ fontSize: '10px' }}>Times Up</div>
+                                <div style={{ fontSize: '20px' }}>Bisque's 30th</div>
                             </div>
                             <div className="image-placeholder">
-                                {/* {name?.top?.category} */}
-                                <img src={displayImage(name.top.category)} alt={name?.top?.category} />
+                                <img src='./friends-family.jpeg' alt={name?.top?.category} />
+                            </div>
+                            <div className="image-2">
+                                <img src='./sports.jpeg' alt={name?.top?.category} />
+                            </div>
+                            <div className="image-3">
+                                <img src='./survivor.jpeg' alt={name?.top?.category} />
                             </div>
                         </div>
-                        <div className="card-bottom">
-                            <div className="times-up-text-bottom">Times Up: Bisque's 30th</div>
+                        <div className="card-bottom back bottom">
+                            <div className="image-1">
+                                {/* {name?.top?.category} */}
+                                <img src="/am-israel-chai.JPG" alt={name?.top?.category} />
+                            </div>
                             <div className="card-text-container">
-                                {name?.bottom?.name}
+                                <div style={{ fontSize: '10px' }}>Times Up</div>
+                                <div style={{ fontSize: '20px' }}>Bisque's 30th</div>
                             </div>
                             <div className="image-placeholder">
-                                {/* {name?.bottom?.category} */}
-                                <img src={displayImage(name.bottom.category)} alt={name?.bottom?.category} />
+                                <img src="./medicine.jpeg" alt={name?.bottom?.category} />
+                            </div>
+                            <div className="image-2">
+                                <img src="./pop-culture.JPG" alt={name?.bottom?.category} />
                             </div>
                         </div>
                     </div>
