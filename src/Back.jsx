@@ -1088,7 +1088,7 @@ const Cards = () => {
                                 <img src="/animatedimage.jpeg" alt={name?.top?.category} />
                             </div>
                             <div className="card-text-container">
-                                <div style={{ fontSize: '10px' }}>Times Up</div>
+                                <div style={{ fontSize: '12px' }}>Times Up</div>
                                 <div style={{ fontSize: '20px' }}>Bisque's 30th</div>
                             </div>
                             <div className="image-placeholder">
@@ -1107,7 +1107,7 @@ const Cards = () => {
                                 <img src="/am-israel-chai.JPG" alt={name?.top?.category} />
                             </div>
                             <div className="card-text-container">
-                                <div style={{ fontSize: '10px' }}>Times Up</div>
+                                <div style={{ fontSize: '12px' }}>Times Up</div>
                                 <div style={{ fontSize: '20px' }}>Bisque's 30th</div>
                             </div>
                             <div className="image-placeholder">
