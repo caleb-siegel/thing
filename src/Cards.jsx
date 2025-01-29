@@ -59,7 +59,7 @@ const Cards = () => {
             "bottom": {"id": 28, "name": "Zach Woods", "category": "A"}
         },
         {
-            "top": {"id": 29, "name": "Yamil “Yam Yam” Arocho", "category": "D"},
+            "top": {"id": 29, "name": 'Yamil "Yam Yam" Arocho', "category": "D"},
             "bottom": {"id": 30, "name": "Harry Bailey", "category": "A"}
         },
         {
@@ -136,7 +136,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 67, "name": "Nava Morris", "category": "C"},
-            "bottom": {"id": 68, "name": "Kyle “Higgy Higgy Hoo” Higashioka", "category": "E"}
+            "bottom": {"id": 68, "name": 'Kyle "Higgy Higgy Hoo" Higashioka', "category": "E"}
         },
         {
             "top": {"id": 69, "name": "Rob Cesternino", "category": "D"},
@@ -268,7 +268,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 133, "name": "Mark Brendanawicz", "category": "A"},
-            "bottom": {"id": 134, "name": "Nancy “Savti” Siegel", "category": "C"}
+            "bottom": {"id": 134, "name": 'Nancy "Savti" Siegel', "category": "C"}
         },
         {
             "top": {"id": 135, "name": "George Rohr", "category": "C"},
@@ -415,7 +415,7 @@ const Cards = () => {
             "bottom": {"id": 206, "name": "Yehuda!", "category": "A"}
         },
         {
-            "top": {"id": 207, "name": "Isiah “IKF” Kiner-Falefa", "category": "E"},
+            "top": {"id": 207, "name": 'Isiah "IKF" Kiner-Falefa', "category": "E"},
             "bottom": {"id": 208, "name": "Trent Crimm The Independent", "category": "A"}
         },
         {
@@ -444,7 +444,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 221, "name": "Uncle Rabbi Sheldon Shelley Juan Soto Morris", "category": "C"},
-            "bottom": {"id": 222, "name": "Anthony “Antoine Rizz” Rizzo", "category": "E"}
+            "bottom": {"id": 222, "name": 'Anthony "Antoine Rizz" Rizzo', "category": "E"}
         },
         {
             "top": {"id": 223, "name": "Dr. Tori Aspir", "category": "B"},
@@ -675,7 +675,7 @@ const Cards = () => {
             "bottom": {"id": 336, "name": "David Morris", "category": "C"}
         },
         {
-            "top": {"id": 337, "name": "Adina “Dinky” Meister", "category": "C"},
+            "top": {"id": 337, "name": 'Adina "Dinky" Meister', "category": "C"},
             "bottom": {"id": 338, "name": "Sue Gilad", "category": "C"}
         },
         {
@@ -796,7 +796,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 397, "name": "Jonah Platt", "category": "A"},
-            "bottom": {"id": 398, "name": "David “Gordo” Gordon", "category": "A"}
+            "bottom": {"id": 398, "name": 'David "Gordo" Gordon', "category": "A"}
         },
         {
             "top": {"id": 399, "name": "Idina Menzel", "category": "A"},
@@ -807,7 +807,7 @@ const Cards = () => {
             "bottom": {"id": 402, "name": "Charles Boyle", "category": "A"}
         },
         {
-            "top": {"id": 403, "name": "David “Papa” Siegel", "category": "C"},
+            "top": {"id": 403, "name": 'David "Papa" Siegel', "category": "C"},
             "bottom": {"id": 404, "name": "Austin Li Coon", "category": "D"}
         },
         {
@@ -891,7 +891,7 @@ const Cards = () => {
             "bottom": {"id": 444, "name": "Professor Severus Snape", "category": "A"}
         },
         {
-            "top": {"id": 445, "name": "“Boston” Rob Mariano", "category": "D"},
+            "top": {"id": 445, "name": '"Boston" Rob Mariano', "category": "D"},
             "bottom": {"id": 446, "name": "Nick Parker", "category": "A"}
         },
         {
@@ -907,7 +907,7 @@ const Cards = () => {
             "bottom": {"id": 452, "name": "Zoe Peck", "category": "B"}
         },
         {
-            "top": {"id": 453, "name": "Racheli “Rimpi” Weil", "category": "C"},
+            "top": {"id": 453, "name": 'Racheli "Rimpi" Weil', "category": "C"},
             "bottom": {"id": 454, "name": "Kocoum", "category": "A"}
         },
         {
@@ -940,7 +940,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 469, "name": "Tina Wesson", "category": "D"},
-            "bottom": {"id": 470, "name": "Shantel “Shan” Smith", "category": "D"}
+            "bottom": {"id": 470, "name": 'Shantel "Shan" Smith', "category": "D"}
         },
         {
             "top": {"id": 471, "name": "Detlef Schrempf", "category": "A"},
@@ -968,7 +968,7 @@ const Cards = () => {
         },
         {
             "top": {"id": 483, "name": "Lin-Manuel Miranda", "category": "A"},
-            "bottom": {"id": 484, "name": "Rena “Renèe” Kleiner", "category": "C"}
+            "bottom": {"id": 484, "name": 'Rena "Renèe" Kleiner', "category": "C"}
         },
         {
             "top": {"id": 485, "name": "Catherine O'Hara", "category": "A"},
@@ -1080,28 +1080,26 @@ const Cards = () => {
 
 
     return (
-        <div className="card-grid">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4">
             {names.map((name) => {
                 return (
-                    <div key={name?.top?.id} className="card">
-                        <div className="card-top">
-                            <div className="times-up-text-top">Times Up: Bisque's 30th</div>
-                            <div className="card-text-container">
+                    <div key={name?.top?.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div className="p-4 border-b">
+                            <div className="text-lg font-bold text-center mb-2">Times Up: Bisque's 30th</div>
+                            <div className="text-xl font-semibold text-center">
                                 {name?.top?.name}
                             </div>
-                            <div className="image-placeholder">
-                                {/* {name?.top?.category} */}
-                                <img src={displayImage(name.top.category)} alt={name?.top?.category} />
+                            <div className="mt-4 aspect-w-16 aspect-h-9">
+                                <img src={displayImage(name.top.category)} alt={name?.top?.category} className="w-full h-full object-cover" />
                             </div>
                         </div>
-                        <div className="card-bottom">
-                            <div className="times-up-text-bottom">Times Up: Bisque's 30th</div>
-                            <div className="card-text-container">
+                        <div className="p-4">
+                            <div className="text-lg font-bold text-center mb-2">Times Up: Bisque's 30th</div>
+                            <div className="text-xl font-semibold text-center">
                                 {name?.bottom?.name}
                             </div>
-                            <div className="image-placeholder">
-                                {/* {name?.bottom?.category} */}
-                                <img src={displayImage(name.bottom.category)} alt={name?.bottom?.category} />
+                            <div className="mt-4 aspect-w-16 aspect-h-9">
+                                <img src={displayImage(name.bottom.category)} alt={name?.bottom?.category} className="w-full h-full object-cover" />
                             </div>
                         </div>
                     </div>

@@ -19,6 +19,7 @@
   font-size: 18px; /* Start with a base font size */
   font-weight: bold;
   background-color: #87CEEB;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +51,7 @@
 }
 
 .card-top:before {
-  border: 1px solid #000; /* Border thickness and color */
+  border: 1px solid #fff; /* Border thickness and color */
 }
 
 .times-up-text-top {
@@ -62,7 +63,7 @@
   background-color: #87CEEB;
   font-size: 9px; 
   font-weight: bold;
-  color: #000; 
+  color: #fff; 
   z-index: 10; 
   /* border-radius: 4px;  */
   /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);  */

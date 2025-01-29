@@ -7,7 +7,8 @@ import Back from './Back.jsx'
 import './index.css'
 import App from './App.jsx'
 import Cards from './Cards.jsx'
-
+import CardDisplay from './incohearant/incohearant.jsx';
+import InBack from './incohearant/inBack.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,14 @@ const router = createBrowserRouter([
       {
         path: "back",
         element: <Back />,
+      },
+      {
+        path: "incohearant",
+        element: <CardDisplay />,
+      },
+      {
+        path: "incohearant-back",
+        element: <InBack />,
       },
     ],
   },
