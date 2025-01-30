@@ -2,55 +2,24 @@ import React from 'react';
 
 const SimpleCard = ({ gibberish }) => {
   return (
-    <div className="transform -rotate-90 w-96 h-64">
-      <div className="w-64 h-96 rounded-xl overflow-hidden shadow-lg bg-white">
-        <div className="h-4/5 p-6 flex flex-col justify-center">
-          <p className="text-3xl font-bold text-black leading-tight">
-            {gibberish}
-          </p>
-        </div>
-        
-        <div className="h-1/5 relative" style={{ backgroundColor: '#87CEEB' }}>
-          <div className="absolute inset-0 grid grid-cols-6 w-full h-full">
-            <div className="bg-white/5" />
-            <div className="bg-white/10" />
-            <div className="bg-white/5" />
-            <div className="bg-white/10" />
-            <div className="bg-white/5" />
-            <div className="bg-white/10" />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-white text-sm font-bold">INCOHEARENT</p>
-          </div>
-        </div>
+    <div className="w-48 h-72 rounded-xl overflow-hidden shadow-lg print:shadow-none border border-[#87CEEB]/30" style={{ backgroundColor: 'rgb(255, 255, 255)' }}>
+      <div className="h-4/5 p-4 flex flex-col justify-center bg-white shadow-inner print:shadow-none">
+        <p className="text-2xl font-bold text-black leading-tight">
+          {gibberish}
+        </p>
       </div>
-    </div>
-  );
-};
-
-const DetailCard = ({ phrase, hint, description }) => {
-  return (
-    <div className="w-64 h-96 rounded-xl overflow-hidden shadow-lg" style={{ backgroundColor: '#87CEEB' }}>
-      <div className="p-6 flex flex-col h-full">
-        <div className="mb-6">
-          <p className="text-3xl font-bold text-black leading-tight">
-            {phrase}
-          </p>
+      
+      <div className="h-1/5 relative" style={{ backgroundColor: '#87CEEB' }}>
+        <div className="absolute inset-0 grid grid-cols-6 w-full h-full">
+          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
+          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
+          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
+          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
+          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
         </div>
-        
-        <div className="bg-white/30 rounded-lg p-3 mb-4">
-          <p className="text-sm font-bold text-black uppercase mb-1">HINT</p>
-          <p className="text-sm text-black">{hint}</p>
-        </div>
-        
-        <div className="flex-1">
-          <p className="text-sm text-black">
-            {description}
-          </p>
-        </div>
-        
-        <div className="text-center mt-4">
-          <p className="text-black text-sm font-bold">INCOHEARENT</p>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <p className="text-white text-xs font-bold">INCOHEARENT</p>
         </div>
       </div>
     </div>
@@ -1011,47 +980,54 @@ const CardDisplay = () => {
   ]
   
   return (
-    <div className="grid grid-cols-2 gap-12 p-6 max-h-[calc(100vh-2rem)] overflow-y-auto print:grid print:grid-cols-2 print:gap-8 print:p-4">
+    <div className="grid grid-cols-2 gap-8 p-6 max-h-[calc(100vh-2rem)] overflow-y-auto">
       <style type="text/css" media="print">{`
         @page {
-          size: letter portrait;
-          margin: 0.5in;
+          size: portrait;
+          margin: 0.25in;
         }
         @media print {
           body {
             margin: 0;
             padding: 0;
+            min-height: 11in;
+            background-color: transparent !important;
           }
           .grid {
             display: grid !important;
             grid-template-columns: repeat(2, 1fr) !important;
-            grid-template-rows: repeat(4, 1fr) !important;
-            gap: 2rem !important;
-            page-break-after: always;
+            grid-auto-rows: 2.5in !important;
+            gap: 0.5rem !important;
+            padding: 0.5rem !important;
+            height: auto !important;
+            overflow: visible !important;
+            min-height: 11in;
+            background-color: transparent !important;
+          }
+          .card-wrapper {
+            transform: rotate(-90deg);
+            transform-origin: center center;
+            height: 2.5in;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            page-break-inside: avoid;
+            break-inside: avoid;
+            background-color: transparent !important;
+            box-shadow: none !important;
           }
           .grid > div:nth-child(8n) {
             page-break-after: always;
-          }
-          .grid > div {
-            break-inside: avoid;
-            page-break-inside: avoid;
+            break-after: page;
           }
         }
       `}</style>
       {phrases?.map((phrase, index) => (
-        <SimpleCard 
-          key={index}
-          gibberish={phrase.front}
-        />
-      ))}
-
-      {phrases?.map((phrase, index) => (
-        <DetailCard 
-          key={index}  
-          phrase={phrase.back}
-          hint={phrase.hint}
-          description={phrase.description}
-        />
+        <div key={index} className="card-wrapper">
+          <SimpleCard 
+            gibberish={phrase.front}
+          />
+        </div>
       ))}
     </div>
   );
