@@ -21,8 +21,9 @@ const DetailCard = ({ phrase, hint, description }) => {
             </p>
           </div>
           
-          <div className="text-center mt-3">
+          <div className="text-center mt-3 flex flex-col items-center">
             <p className="text-black text-xs font-bold">INCOHEARENT</p>
+            <p className="text-black text-[0.6rem] font-medium opacity-90">Bisque's 30th</p>
           </div>
         </div>
       </div>

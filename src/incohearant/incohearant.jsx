@@ -10,16 +10,9 @@ const SimpleCard = ({ gibberish }) => {
       </div>
       
       <div className="h-1/5 relative" style={{ backgroundColor: '#87CEEB' }}>
-        <div className="absolute inset-0 grid grid-cols-6 w-full h-full">
-          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
-          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
-          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
-          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
-          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.05)' }} />
-          <div style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
-        </div>
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
           <p className="text-white text-xs font-bold">INCOHEARENT</p>
+          <p className="text-white text-[0.6rem] font-medium opacity-90">Bisque's 30th</p>
         </div>
       </div>
     </div>
